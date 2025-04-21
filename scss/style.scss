@@ -1,0 +1,84 @@
+@import "utilidades/variables";
+@import "utilidades/mixin";
+
+header {
+  background-color: $color-principal;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  img {
+    width: 15%;
+  }
+  nav ul {
+    list-style: none;
+    color: whitesmoke;
+    display: flex;
+    gap: 30px - 5px;
+    padding-right: 15px + 10px;
+  }
+  .exit {
+    color: $color-secundario;
+    text-decoration: none;
+  }
+}
+
+main {
+  @include flex;
+  flex-wrap: wrap;
+  .textos {
+    text-align: center;
+  }
+  .textos h1 span {
+    display: block;
+    color: $color-terciario;
+  }
+  .textos .boton {
+    background-color: $color-principal;
+    display: inline-block;
+    padding: 5px + 5px;
+    color: $color-secundario;
+    border-top-left-radius: 10px + 10px;
+    border-bottom-left-radius: 10px + 10px;
+    margin-top: 15px - 5px;
+    box-shadow: 10px 5px 8px $color-cuarto;
+  }
+  .img {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+  }
+  .img img {
+    width: 40%;
+    filter: drop-shadow(10px 10px 10px $color-cuarto);
+  }
+  imagen {
+    @include medidas(100px, 100px);
+  }
+}
+
+section {
+  background-color: $color-principal;
+  @include flex;
+  gap: 40px;
+  padding: 20px;
+  div {
+    color: $color-secundario;
+    text-align: center;
+  }
+  .imagen {
+    width: 100px;
+    height: 100px;
+  }
+}
+
+footer {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  .imgextra {
+    @include medidas(50px, 50px);
+  }
+}
